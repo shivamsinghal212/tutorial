@@ -16,7 +16,7 @@ class TutorialPipeline(object):
  
   def process_item(self, item, spider):
     # check item type to decide which table to insert
-        self.cursor.execute("""INSERT INTO odi_ranking (Position, Player, Country, Rating, Best_Rank) VALUES(%s, %s, %s, %s, %s)""", (item.get('Position'), item.get('Player'), item.get('Country'), item.get('Rating'),  item.get('Best_Rank') ))
+        self.cursor.execute("""INSERT INTO "odi_ranking" (id, player, country, rating, bestrank) VALUES(%s, %s, %s, %s, %s)""", (item.get('Position'), item.get('Player'), item.get('Country'), item.get('Rating'),  item.get('Best_Rank') ))
 
         self.connection.commit()
         self.cursor.fetchall()
