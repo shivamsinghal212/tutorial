@@ -11,4 +11,8 @@ import scrapy
 class TutorialItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    Position = scrapy.Field()
+    Player = scrapy.Field()
+    Country = scrapy.Field()
+    Rating = scrapy.Field()
+    Best_Rank = scrapy.Field()
